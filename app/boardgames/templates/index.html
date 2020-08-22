@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if games %}
+    {% for game in games %}
+      <h2>{{ game.title }}</h2>
+      <p>{{ game.id }}) {{ game.label }}</p>
+    {% endfor %}
+{% else %}
+      <h1>Django Bootstrap starter template [no data]</h1>
+      <p>Use this document as a way to quickly start any new django project.<br>All you get is this text and a mostly barebones HTML document.</p>
+{% endif %}
+
+{% endblock %}

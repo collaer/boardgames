@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<p>
+<form action="/boardgames/add/" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="ok" />
+</form>
+</p>
+
+{% endblock %}
